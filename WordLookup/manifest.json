@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "WordLookup", 
+    "version": "1.0",
+    "description": "An extension which lets you lookup any word",
+    "browser_action": {
+        "default_icon": "hello_extensions.png",
+        "default_popup":"popup.html",
+        "default_title": "Look up word"
+    },
+
+    "content_scripts": [
+
+        {
+            "matches": [
+
+                "<all_urls>"
+            ],
+            "js": ["content.js"]
+         }
+
+    ],
+
+    "background": {
+        "scripts": ["background.js"]
+    }
+}
